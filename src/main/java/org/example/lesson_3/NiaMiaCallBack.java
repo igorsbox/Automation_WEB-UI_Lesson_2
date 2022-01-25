@@ -19,10 +19,10 @@ public class NiaMiaCallBack {
 //        Thread.sleep(1000);
 //        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//placeholder[contains(text(),'Ваше имя']")));
         driver.findElement(By.xpath("//*[@placeholder='* Ваше имя:']")).sendKeys("Наталья Иванова");
-        driver.findElement(By.xpath("//*[@placeholder='* Ваш телефон:']")).sendKeys("81234567890");
+        driver.findElement(By.xpath("//*[@placeholder='* Ваш телефон:']")).sendKeys("+7 (916) 135-85-25");
         driver.findElement(By.xpath("//*[@placeholder='Комментарий: ']")).sendKeys("TeSt");
-        driver.findElement(By.xpath("//button[text()='Отправить']"));
+        driver.findElement(By.xpath("//button[text()='Отправить']")).click();
         Thread.sleep(2000);
-        driver.quit();
+//        driver.quit();
     }
 }

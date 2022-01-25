@@ -24,5 +24,6 @@ public class NiaMiaCallBack {
         driver.findElement(By.xpath("//button[text()='Отправить']")).click();
         Thread.sleep(2000);
         driver.quit();
+
     }
 }

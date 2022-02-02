@@ -68,7 +68,6 @@ public class NiaMiaTest {
                 .click()
                 .build()
                 .perform();
-//        actions.moveToElement(driver.findElement(By.xpath("//a[@href='https://niamia.ru/jubki-iz-fatina/kruzhevnye-topy/roskoshnyj-top-s-vyshivkoj-na-setke'][@data-slick-index='2']")))
         actions.moveToElement(driver.findElement(By.xpath("//*[@id='mainContainer']/div/ul/li[3]/div/div[1]/span[2]")))
                 .click()
                 .pause(java.time.Duration.ofSeconds(3))

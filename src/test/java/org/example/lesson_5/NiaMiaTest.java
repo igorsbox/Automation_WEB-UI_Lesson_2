@@ -8,6 +8,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import java.time.Duration;
@@ -67,8 +68,10 @@ public class NiaMiaTest {
                 .click()
                 .build()
                 .perform();
-        actions.moveToElement(driver.findElement(By.xpath("//a[@href='https://niamia.ru/jubki-iz-fatina/kruzhevnye-topy/roskoshnyj-top-s-vyshivkoj-na-setke'][@data-slick-index='2']")))
-                .pause(java.time.Duration.ofSeconds(1))
+//        actions.moveToElement(driver.findElement(By.xpath("//a[@href='https://niamia.ru/jubki-iz-fatina/kruzhevnye-topy/roskoshnyj-top-s-vyshivkoj-na-setke'][@data-slick-index='2']")))
+        actions.moveToElement(driver.findElement(By.xpath("//*[@id='mainContainer']/div/ul/li[3]/div/div[1]/span[2]")))
+                .click()
+                .pause(java.time.Duration.ofSeconds(3))
                 .moveToElement(driver.findElement(By.xpath("//span[.='Роскошный топ с вышивкой на сетке']")))
                 .build()
                 .perform();

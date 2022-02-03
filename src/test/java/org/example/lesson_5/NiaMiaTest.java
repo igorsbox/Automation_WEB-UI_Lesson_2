@@ -68,7 +68,9 @@ public class NiaMiaTest {
                 .click()
                 .build()
                 .perform();
-        actions.moveToElement(driver.findElement(By.xpath("//*[@id='mainContainer']/div/ul/li[3]/div/div[1]/span[2]")))
+//        actions.moveToElement(driver.findElement(By.xpath("//*[@id='mainContainer']/div/ul/li[3]/div/div[1]/span[2]")))
+        actions.moveToElement(driver.findElement(By.xpath("//a[contains(@href,'roskoshnyj-top-s-vyshivkoj-na-setke' )" +
+                        "]/..//..//span[@class=\"slick-next js-btn-hover slick-arrow\"]")))
                 .click()
                 .pause(java.time.Duration.ofSeconds(3))
                 .moveToElement(driver.findElement(By.xpath("//span[.='Роскошный топ с вышивкой на сетке']")))

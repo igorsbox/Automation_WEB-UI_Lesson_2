@@ -1,5 +1,6 @@
 package org.example.lesson_6;
 
+import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,6 +17,7 @@ public class KorzinaPage extends BasePage{
     @FindBy (xpath = LOGIN_INPUT_LOKATOR_BY_XPATH)
     private WebElement oformitZakazButton;
 
+    @Step("Клик на кнопку ОФОРМИТЬ ЗАКАЗ на странице Корзина")
     public KorzinaPage clickOformitZakaz() {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(LOGIN_INPUT_LOKATOR_BY_XPATH)));
         oformitZakazButton.click();
@@ -25,6 +27,7 @@ public class KorzinaPage extends BasePage{
     @FindBy (id = "comment")
     private WebElement comment;
 
+    @Step("Заполнить комментарий к заказу")
     public KorzinaPage fillComment(String commentary) {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[contains(text(),'Оформить заказ')]")));
         comment.sendKeys(commentary);
@@ -34,6 +37,7 @@ public class KorzinaPage extends BasePage{
     @FindBy (className = "simplecheckout-button-right")
     private WebElement oformitZakazButton2;
 
+    @Step("Клик на кнопку ОФОРМИТЬ ЗАКАЗ на странице подтверждения заказа")
     public SuccessOrderPage clickOformitZakazButton2() {
         oformitZakazButton2.click();
         return new SuccessOrderPage(driver);
